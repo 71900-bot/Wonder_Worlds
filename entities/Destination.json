@@ -1,0 +1,89 @@
+{
+  "name": "Destination",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the destination"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country where the destination is located"
+    },
+    "continent": {
+      "type": "string",
+      "enum": [
+        "Africa",
+        "Asia",
+        "Europe",
+        "North America",
+        "South America",
+        "Oceania",
+        "Antarctica"
+      ],
+      "description": "Continent of the destination"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "beach",
+        "mountain",
+        "city",
+        "desert",
+        "forest",
+        "island",
+        "historical",
+        "adventure"
+      ],
+      "description": "Type of destination"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the destination"
+    },
+    "long_description": {
+      "type": "string",
+      "description": "Detailed description for the detail page"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Main image URL"
+    },
+    "gallery": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Gallery image URLs"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Rating out of 5"
+    },
+    "best_time_to_visit": {
+      "type": "string",
+      "description": "Best season or months to visit"
+    },
+    "average_cost": {
+      "type": "string",
+      "description": "Average daily budget range"
+    },
+    "highlights": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key highlights of the destination"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this destination is featured"
+    }
+  },
+  "required": [
+    "name",
+    "country",
+    "category"
+  ]
+}
